@@ -10,8 +10,7 @@ function tabs(
 
   function hideTabContent() {
     tabsContent.forEach((item) => {
-      item.classList.add("hide");
-      item.classList.remove("show", "fade");
+      item.classList.toggle("show", "fade");
     });
 
     tabs.forEach((item) => {
@@ -20,8 +19,7 @@ function tabs(
   }
 
   function showTabContent(i = 0) {
-    tabsContent[i].classList.add("show", "fade");
-    tabsContent[i].classList.remove("hide");
+    tabsContent[i].classList.toggle("show", "fade");
     tabs[i].classList.add(activeClass);
   }
 
